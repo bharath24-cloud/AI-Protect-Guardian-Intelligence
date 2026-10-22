@@ -1,0 +1,98 @@
+
+# ==============================
+# AI-Protect - Git Ignore
+# ==============================
+
+# Documentation - keep locally, do not upload
+docs/
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Logs
+*.log
+logs/
+
+# Jupyter
+.ipynb_checkpoints/
+models/checkpoints/
+
+# Datasets and downloaded artwork
+data/
+datasets/
+dataset/
+wikiart/
+wikiart-all/data/
+wikiart-all/.cache/
+*.parquet
+*.csv
+*.zip
+*.tar
+*.tar.gz
+
+# ML model weights and checkpoints
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.onnx
+*.engine
+checkpoints/
+models/checkpoints/
+saved_models/
+weights/
+
+# Training outputs
+runs/
+wandb/
+mlruns/
+lightning_logs/
+outputs/
+experiments/
+
+# Frontend dependencies
+node_modules/
+.next/
+out/
+dist/
+build/
+coverage/
+
+# Frontend environment files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3

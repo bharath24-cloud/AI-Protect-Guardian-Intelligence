@@ -1,0 +1,27 @@
+# Research Mode Configuration for Multi-Cycle Autonomous Discovery
+research:
+  discovery_cycles: 10
+  experiments_per_cycle: 5
+  exploration_temperature: 1.0
+  active_critic: true
+  enable_continual_learning: true
+  enable_rl_policy: true
+  record_ablation_metrics: true
+
+materials_tasks:
+  - id: "task_1_oxides"
+    description: "Binary and Ternary Transition Metal Oxides"
+    primary_property: "band_gap"
+  - id: "task_2_chalcogenides"
+    description: "Chalcogenides and Sulfides"
+    primary_property: "formation_energy_per_atom"
+  - id: "task_3_halides"
+    description: "Halide Perovskites and Phosphides"
+    primary_property: "bulk_modulus"
+
+baselines:
+  - "random_selection"
+  - "uncertainty_sampling"
+  - "greedy_information_gain"
+  - "heuristic_scoring"
+  - "proposed_rl_scientist"

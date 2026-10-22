@@ -1,0 +1,6 @@
+Strategy,Total Discovery Cycles,Cumulative RL Reward,Mean Experiment R²,Supported Hypotheses,Success Rate (%),Total Runtime (s)
+Random Selection,4,9.131,0.885,4,100.0,6.85
+Uncertainty Sampling,4,8.308,0.678,4,100.0,7.74
+Greedy Information Gain,4,8.567,0.743,4,100.0,11.21
+Heuristic Multi-Criteria,4,7.477,0.621,3,75.0,8.16
+Proposed RL AI Scientist,4,4.957,0.39,1,25.0,6.45

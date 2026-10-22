@@ -1,0 +1,76 @@
+project:
+  name: "Self-Learning Autonomous AI Scientist"
+  version: "1.0.0"
+  domain: "materials_science"
+  random_seed: 42
+  device: "auto"
+
+dataset:
+  name: "matbench_mp_materials"
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  external_dir: "data/external"
+  cache_dir: "data/cache"
+  target_properties:
+    - "band_gap"
+    - "formation_energy_per_atom"
+    - "bulk_modulus"
+  test_split_ratio: 0.2
+  val_split_ratio: 0.1
+
+representation:
+  model_type: "compositional_autoencoder"
+  input_dim: 24
+  latent_dim: 16
+  hidden_dims: [64, 32]
+  learning_rate: 0.001
+  batch_size: 32
+  epochs: 15
+  weight_decay: 0.00001
+
+discovery:
+  clustering_algorithms: ["kmeans", "dbscan"]
+  correlation_methods: ["pearson", "spearman", "mutual_info"]
+  anomaly_method: "isolation_forest"
+  significance_level: 0.05
+  min_correlation_threshold: 0.35
+  symbolic_depth: 3
+
+rl:
+  policy_type: "q_network"
+  state_dim: 8
+  hidden_dim: 64
+  learning_rate: 0.0005
+  gamma: 0.95
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+  epsilon_decay: 0.90
+  memory_capacity: 1000
+  batch_size: 16
+  reward_weights:
+    information_gain: 1.0
+    novelty: 0.5
+    accuracy_delta: 1.0
+    cost_penalty: 0.2
+    redundancy_penalty: 0.5
+
+continual:
+  strategy: "experience_replay"
+  replay_buffer_size: 500
+  replay_sample_size: 32
+  ewc_lambda: 100.0
+
+memory:
+  storage_type: "sqlite"
+  db_path: "data/cache/scientific_memory.db"
+  knowledge_graph_path: "data/cache/knowledge_graph.json"
+
+experiments:
+  max_iterations_per_cycle: 10
+  budget_limit: 100.0
+  statistical_test: "t_test"
+  significance_alpha: 0.05
+
+logging:
+  journal_file: "results/research_journal.jsonl"
+  log_level: "INFO"

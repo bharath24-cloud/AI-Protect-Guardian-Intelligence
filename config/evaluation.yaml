@@ -1,0 +1,27 @@
+# Evaluation and Verification Configuration
+evaluation:
+  significance_level: 0.05
+  confidence_interval: 0.95
+  bootstrap_iterations: 500
+  statistical_tests:
+    - "paired_t_test"
+    - "wilcoxon_signed_rank"
+    - "cohens_d"
+  metrics:
+    discovery:
+      - "candidate_relationships_count"
+      - "validated_relationships_count"
+      - "novelty_score_mean"
+      - "discovery_precision"
+    hypothesis:
+      - "validity_ratio"
+      - "falsification_rate"
+      - "testability_mean"
+    learning:
+      - "rl_cumulative_reward"
+      - "backward_transfer_retention"
+      - "catastrophic_forgetting_index"
+    ml:
+      - "mae"
+      - "rmse"
+      - "r2_score"

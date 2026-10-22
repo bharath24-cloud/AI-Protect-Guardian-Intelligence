@@ -1,0 +1,7 @@
+Configuration,Cycles,Cumulative Reward,Mean R² Score,Supported Hypotheses,Success Rate (%)
+Full Proposed System,4,4.995,0.4,1,25.0
+Ablation 1: No RL Policy (Random),4,5.636,0.41,2,50.0
+Ablation 2: No Continual Learning,4,5.297,0.437,2,50.0
+Ablation 3: No Critic Agent,4,6.919,0.597,3,75.0
+Ablation 4: No Scientific Memory,4,8.55,0.739,4,100.0
+Ablation 5: No Novelty Reward,4,3.264,0.416,2,50.0
