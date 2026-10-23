@@ -7,22 +7,32 @@ A complete, production-grade deep-learning and adversarial protection system des
 ## 1. System Overview & Pipeline
 
 ```
+# 1. System Overview & Pipeline
+
+```text
 IMAGE UPLOAD (Web UI / API)
-       Göé
-       Gû+
-[Image Validation & Preprocessing (Integrity, Exif Stripping, Bounds)]
-       Göé
-       Gû+
+        |
+        v
+[Image Validation & Preprocessing (Integrity, EXIF Stripping, Bounds)]
+        |
+        v
 [Surrogate Vision Model Inference (WikiArt ResNet-50 / ViT / ConvNeXt / CLIP)]
-       Göé
-       Gû+
-[Adversarial Cloaking Engine (PGD, L_inf <= epsilon, Feature/Classification Disruption)]
-       Göé
-       Gö£GöÇGöÇGû¦ [Perceptual Quality Evaluation (SSIM, PSNR, LPIPS, L2, L_inf)]
-       Gö£GöÇGöÇGû¦ [Multi-Model Transferability Matrix (ViT, ConvNeXt, ResNet, CLIP)]
-       Gö£GöÇGöÇGû¦ [Transformation Robustness Suite (JPEG 95/75/50, Resizing, Crop, Blur, Brightness)]
-       Göé
-       Gû+
+        |
+        v
+[Adversarial Cloaking Engine (PGD, L∞ ≤ ε, Feature/Classification Disruption)]
+        |
+        +--------------------------------------------------+
+        |                         |                        |
+        v                         v                        v
+[Perceptual Quality       [Multi-Model             [Transformation
+ Evaluation]               Transferability Matrix]  Robustness Suite]
+(SSIM, PSNR, LPIPS, L2,    (ViT, ConvNeXt,           (JPEG 95/75/50,
+ L∞)                        ResNet, CLIP)             Resizing, Crop,
+                                                     Blur, Brightness)
+        |                         |                        |
+        +-------------------------+------------------------+
+                                  |
+                                  v
 [Download Protected Image & Comprehensive Protection Audit Report (PDF/JSON)]
 ```
 
