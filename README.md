@@ -8,21 +8,21 @@ A complete, production-grade deep-learning and adversarial protection system des
 
 ```
 IMAGE UPLOAD (Web UI / API)
-       Göé
-       Gû+
+       GÃ¶Ã©
+       GÃ»+
 [Image Validation & Preprocessing (Integrity, Exif Stripping, Bounds)]
-       Göé
-       Gû+
+       GÃ¶Ã©
+       GÃ»+
 [Surrogate Vision Model Inference (WikiArt ResNet-50 / ViT / ConvNeXt / CLIP)]
-       Göé
-       Gû+
+       GÃ¶Ã©
+       GÃ»+
 [Adversarial Cloaking Engine (PGD, L_inf <= epsilon, Feature/Classification Disruption)]
-       Göé
-       Gö£GöÇGöÇGû¦ [Perceptual Quality Evaluation (SSIM, PSNR, LPIPS, L2, L_inf)]
-       Gö£GöÇGöÇGû¦ [Multi-Model Transferability Matrix (ViT, ConvNeXt, ResNet, CLIP)]
-       Gö£GöÇGöÇGû¦ [Transformation Robustness Suite (JPEG 95/75/50, Resizing, Crop, Blur, Brightness)]
-       Göé
-       Gû+
+       GÃ¶Ã©
+       GÃ¶Â£GÃ¶Ã‡GÃ¶Ã‡GÃ»Â¦ [Perceptual Quality Evaluation (SSIM, PSNR, LPIPS, L2, L_inf)]
+       GÃ¶Â£GÃ¶Ã‡GÃ¶Ã‡GÃ»Â¦ [Multi-Model Transferability Matrix (ViT, ConvNeXt, ResNet, CLIP)]
+       GÃ¶Â£GÃ¶Ã‡GÃ¶Ã‡GÃ»Â¦ [Transformation Robustness Suite (JPEG 95/75/50, Resizing, Crop, Blur, Brightness)]
+       GÃ¶Ã©
+       GÃ»+
 [Download Protected Image & Comprehensive Protection Audit Report (PDF/JSON)]
 ```
 
@@ -32,31 +32,31 @@ IMAGE UPLOAD (Web UI / API)
 
 ```
 project/ (c:\AI Protect\)
-Gö£GöÇGöÇ wikiart-all/
-Göé   GööGöÇGöÇ data/
-Göé       Gö£GöÇGöÇ test-00000-of-00009.parquet ... test-00008-of-00009.parquet
-Gö£GöÇGöÇ models/
-Göé   Gö£GöÇGöÇ checkpoints/         # Saved PyTorch surrogate models (best_model.pt)
-Göé   GööGöÇGöÇ embeddings/          # Extracted feature vectors (test_embeddings.pt)
-Gö£GöÇGöÇ src/
-Göé   Gö£GöÇGöÇ dataset.py           # Parquet streaming dataset, metadata indexing, class filtering
-Göé   Gö£GöÇGöÇ preprocessing.py     # Image transforms, normalization, artist-aware train/val/test splits
-Göé   Gö£GöÇGöÇ models.py            # Surrogate vision architectures (ResNet-50, ConvNeXt, ViT, CLIP)
-Göé   Gö£GöÇGöÇ train.py             # AdamW, Cosine scheduler, AMP mixed-precision, checkpointing
-Göé   Gö£GöÇGöÇ evaluate.py          # Top-1/balanced accuracy, F1, precision, recall, confusion matrix
-Göé   Gö£GöÇGöÇ embeddings.py        # get_embedding(img) interface, test set embeddings extraction & comparison
-Göé   Gö£GöÇGöÇ adversarial_cloak.py # Bounded PGD cloaking engine (L_inf <= eps, feature/classification disruption)
-Göé   Gö£GöÇGöÇ transferability.py   # Multi-model cross-transferability matrix (ResNet -> ViT, ConvNeXt, CLIP)
-Göé   Gö£GöÇGöÇ robustness.py        # Transformation survival pipeline (JPEG 95/75, resize, crop, blur, brightness)
-Göé   Gö£GöÇGöÇ metrics.py           # SSIM, PSNR, LPIPS, L_inf, L2 verification tables
-Göé   Gö£GöÇGöÇ verify_pipeline.py   # Complete end-to-end pipeline verification check
-Göé   GööGöÇGöÇ validation/          # Rigorous scientific audit scripts (1, 2, 3)
-Gö£GöÇGöÇ experiments/
-Göé   Gö£GöÇGöÇ results.csv          # Experiment outputs & benchmark metrics
-Göé   Gö£GöÇGöÇ plots/               # Training curves, confusion matrices, difference maps, transferability heatmaps
-Göé   GööGöÇGöÇ reports/             # Detailed evaluation logs & summaries
-Gö£GöÇGöÇ backend/                 # FastAPI backend server
-GööGöÇGöÇ frontend/                # Next.js 14 web application
+ wikiart-all/
+ data/
+ test-00000-of-00009.parquet ... test-00008-of-00009.parquet
+ models/
+ checkpoints/         # Saved PyTorch surrogate models (best_model.pt)
+ embeddings/          # Extracted feature vectors (test_embeddings.pt)
+ src/
+ dataset.py           # Parquet streaming dataset, metadata indexing, class filtering
+ preprocessing.py     # Image transforms, normalization, artist-aware train/val/test splits
+ models.py            # Surrogate vision architectures (ResNet-50, ConvNeXt, ViT, CLIP)
+ train.py             # AdamW, Cosine scheduler, AMP mixed-precision, checkpointing
+ evaluate.py          # Top-1/balanced accuracy, F1, precision, recall, confusion matrix
+ embeddings.py        # get_embedding(img) interface, test set embeddings extraction & comparison
+ adversarial_cloak.py # Bounded PGD cloaking engine (L_inf <= eps, feature/classification disruption)
+ transferability.py   # Multi-model cross-transferability matrix (ResNet -> ViT, ConvNeXt, CLIP)
+ robustness.py        # Transformation survival pipeline (JPEG 95/75, resize, crop, blur, brightness)
+ metrics.py           # SSIM, PSNR, LPIPS, L_inf, L2 verification tables
+ verify_pipeline.py   # Complete end-to-end pipeline verification check
+ validation/          # Rigorous scientific audit scripts (1, 2, 3)
+ experiments/
+ results.csv          # Experiment outputs & benchmark metrics
+ plots/               # Training curves, confusion matrices, difference maps, transferability heatmaps
+ reports/             # Detailed evaluation logs & summaries
+ backend/                 # FastAPI backend server
+ frontend/                # Next.js 14 web application
 ```
 
 ---
